@@ -19,7 +19,7 @@ while not_won:
 
     no_guessed = raw_input("> ")
 
-    try:
+    if no_guessed.isdigit():
         no_guessed = int(no_guessed)
 
         if no_guessed < number:
@@ -30,7 +30,7 @@ while not_won:
             not_won = False
             print "You win! Good for you."
         counter += 1
-    except ValueError:
+    else:
         print "Give me an integer!"
 
 
